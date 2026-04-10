@@ -1,4 +1,4 @@
-use ark_ff::{PrimeField};
+use ark_ff::PrimeField;
 // use rand::{thread_rng, Rng};
 // use sha3::digest::XofReader;
 // use std::cmp::min;
@@ -12,8 +12,7 @@ pub fn from_hex<F: PrimeField>(s: &str) -> F {
 }
 
 pub fn random_scalar<F: PrimeField>() -> F {
-    let mut rng = ark_std::rand::thread_rng();
-    F::rand(&mut rng)
+    panic!("not implemented");
 }
 
 pub fn random_scalar_without_0<F: PrimeField>() -> F {
@@ -70,7 +69,7 @@ pub fn random_scalar_without_0<F: PrimeField>() -> F {
 //     if F::MODULUS_BIT_SIZE == 64 { // Quick and dirty fix for Goldilocks
 //         words = 2;
 //     }
-    
+
 //     let mod_ = F::NUM_BITS % 8;
 //     let mask = if mod_ == 0 { 0xFF } else { (1u8 << mod_) - 1 };
 //     let mut buf = vec![0u8; bytes];
